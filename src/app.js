@@ -1,11 +1,8 @@
 import "bootstrap"
 import "./style.css"
 
-
 import "./assets/img/rigo-baby.jpg"
 import "./assets/img/4geeks.ico"
-
-
 
 window.onload = function() {
   //write your code here
@@ -23,11 +20,9 @@ window.onload = function() {
   //function that combines 1 element of each given array into one string and returns it already spaced
   const fusion = (a, b, c, d) => `${getWord(a)} ${getWord(b)} ${getWord(c)} ${getWord(d)}`
 
-
-
+  //resultados
   console.log("Result ---> " + fusion(who, action, what, when))
   document.getElementById("excuse").innerHTML = fusion(who, action, what, when)
-
 
   console.log("Hello Rigo from the console!")
 };
