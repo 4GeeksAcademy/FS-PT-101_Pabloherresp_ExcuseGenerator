@@ -13,7 +13,7 @@ window.onload = function() {
 
   let dictionary = [who, action, what, when]
 
-  
+
   //function that returns a random value between 0 and the given parameter
   const rnd = length => Math.floor(Math.random() * length)
 
@@ -23,18 +23,13 @@ window.onload = function() {
   //function that combines 1 element of each given array into one string and returns it already spaced - just a way of showing the text in console
   const fusion = (a, b, c, d) => `${getWord(a)} ${getWord(b)} ${getWord(c)} ${getWord(d)}`
 
-  //loop through the given elements and changes the text with the one in the dictionary
-  const printHTML = (children) => {
-      for(let i=0;i<children.length; i++){
-        children[i].innerHTML = getWord(dictionary[i])
-      }
-    }
 
-
-  //resultados
+  //resultados en consola
   console.log("Result ---> " + fusion(who, action, what, when))
 
-  printHTML(document.getElementById("excuse").children)
+  //mostrar en HTML
+  const printHTML = (el,index) => el.innerHTML = getWord(dictionary[index]);
+  [...document.getElementById("excuse").children].forEach(printHTML)
 
 
   console.log("Hello Rigo from the console!")
